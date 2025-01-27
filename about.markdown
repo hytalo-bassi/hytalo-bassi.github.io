@@ -1,18 +1,25 @@
 ---
 layout: page
-title: About
+title: Sobre mim
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Sou Hytalo Bassi, estudante de Eng. da Computação na Universidade Federal de Mato Grosso do Sul (UFMS) e faço postagens
+sobre tecnologias, ferramentas e guias.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Meu propósito é ajudar quem tem vontade de aprender e mudar o mundo ao seu redor. Assim como eu, muitas pessoas
+começaram na computação sem apoio algum e tiveram que se virar para aprender tudo do zero.
 
 
-[jekyll-organization]: https://github.com/jekyll
+## Experiência
+
+Já produzi diversos softwares em várias linguagens como
+- Python (scripts para automatização; IA; webscraping) com Flask, Django, Tensorflow e Beautifulsoup.
+- JS/TS (sites institucionais; PWAs; REST APIs) com Express, Node.js e React.JS
+- Kotlin (aplicativos Android) com Jetpack Compose.
+- Java (aplicativos Android e Desktop) com Jetpack Compose, Swing.
+- C (Arduino) 
+- Bash (scripts para automatização de sistemas Linux)
+- C# (jogos) com Godot
+- Golang (scripts para automatização).
+
