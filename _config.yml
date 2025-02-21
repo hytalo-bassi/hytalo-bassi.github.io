@@ -13,6 +13,9 @@ plugins:
   - jekyll-toc
   - jekyll-feed
 
+include:
+  - google490ec21acd5a4083.html
+
 defaults:
   - scope:
       path: ""
