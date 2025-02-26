@@ -3,6 +3,7 @@ layout: post
 title:  "Como construir um servidor de arquivos com Alpine Linux"
 date:   2025-01-29 14:54:00 -0400
 categories: server
+image: "/assets/images/server1.jpg"
 ---
 
 Você trocou seu velho computador e não sabe o que fazer com ele? Pois, então o use como servidor.
