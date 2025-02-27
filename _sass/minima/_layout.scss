@@ -5,6 +5,7 @@
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
+  color: #FFFFFF;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -17,10 +18,11 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  color: #FFF;
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: #FFF;
   }
 }
 
@@ -186,6 +188,7 @@
 
 .post-list-heading {
   @include relative-font-size(1.75);
+  color: #3847F0;
 }
 
 .post-list {
@@ -205,6 +208,7 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+  color: #FFF;
 }
 
 
