@@ -1,6 +1,28 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
+// Colors
+
+$primary-700: #081265 !default;
+$primary-500: #3847F0 !default;
+
+$secondary-400: #756D16 !default;
+$secondary-200: #C5B92C !default;
+$secondary-100: #F0E138 !default;
+
+$grey-700: #1F1F24 !default;
+$grey-600: #3E3E45 !default;
+$grey-100: #F1F1F1 !default;
+
+$text-color:       $grey-100 !default;
+$background-color: $grey-700 !default;
+$brand-color:      $primary-500 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+
+// Typography
 
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $base-font-size:   16px !default;
@@ -8,15 +30,12 @@ $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
+
+// Units
+
 $spacing-unit:     30px !default;
 
-$text-color:       #FFFFFF !default;
-$background-color: #1F1F24 !default;
-$brand-color:      #3847F0 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+// ...
 
 $table-text-align: left !default;
 
