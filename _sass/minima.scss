@@ -1,5 +1,47 @@
 @charset "utf-8";
 
+// Fonts
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../assets/fonts/woff2/FiraCode-Light.woff2") format("woff2"),
+       url("../assets/fonts/woff/FiraCode-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../assets/fonts/woff2/FiraCode-Regular.woff2") format("woff2"),
+       url("../assets/fonts/woff/FiraCode-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../assets/fonts/woff2/FiraCode-Medium.woff2") format("woff2"),
+       url("../assets/fonts/woff/FiraCode-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../assets/fonts/woff2/FiraCode-SemiBold.woff2") format("woff2"),
+       url("../assets/fonts/woff/FiraCode-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../assets/fonts/woff2/FiraCode-Bold.woff2") format("woff2"),
+       url("../assets/fonts/woff/FiraCode-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 // Colors
 
 $primary-700: #081265 !default;
@@ -21,15 +63,13 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-
 // Typography
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size:   16px !default;
+$base-font-family: "FiraCode" !default;
+$base-font-size:   20px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
-
 
 // Units
 
