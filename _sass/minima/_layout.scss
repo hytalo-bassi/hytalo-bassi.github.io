@@ -178,8 +178,11 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit * 1.73 0;
   flex: 1;
+  @include media-query($on-laptop) {
+    padding: $spacing-unit * 0.73 0
+  }
 }
 
 .page-heading {
@@ -202,7 +205,8 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: $secondary-100;
+  font-weight: 300;
 }
 
 .post-link {
@@ -217,12 +221,18 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit * 1.73;
+
+  @include media-query($on-laptop) {
+    margin-bottom: $spacing-unit * 1.46;
+  }
 }
 
 .post-title {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
+  color: $brand-color;
+  font-weight: 700;
   line-height: 1;
 
   @include media-query($on-laptop) {
@@ -276,3 +286,23 @@
 	padding-top: 90px;
 	
 }
+
+.post-toc-button {
+  width: 36px;
+  height: 36px;
+  
+  border: 1px solid $secondary-400;
+  border-radius: 10%;
+
+  background: $background-color;
+  color: $grey-100;
+
+  filter: drop-shadow(0px 0px 4px black);
+
+  position: fixed;
+  right: $spacing-unit;
+  bottom: $spacing-unit / 3;
+
+  font-weight: 700;
+}
+
