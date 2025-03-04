@@ -395,3 +395,54 @@
   font-weight: 700;
 }
 
+.popup {
+  width: 100vw;
+  height: 100vh;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.toc {
+  background: $background-color;
+  border-radius: 10px;
+  width: 100%;
+
+  border: 1px solid $grey-100;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .75));
+
+  padding: $spacing-unit * 2.6 $spacing-unit * 1.8;
+  
+  margin: auto $spacing-unit * 4.5 auto;
+
+  @include media-query($on-laptop) {
+    margin: $spacing-unit * 6.8 $spacing-unit / 2 auto;
+    padding: $spacing-unit * 4.8 $spacing-unit * 0.2666;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.toc div.close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: auto;
+}
+
+.toc button.close {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  color: $grey-100;
+  border-color: rgba(0, 0, 0, 0);
+}

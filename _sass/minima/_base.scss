@@ -21,7 +21,6 @@ body {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
@@ -189,6 +188,8 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit * 4.5;
   padding-left: $spacing-unit * 4.5;
+  position: relative;
+  overflow-x: hidden;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
