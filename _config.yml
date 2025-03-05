@@ -15,6 +15,7 @@ plugins:
 
 include:
   - google490ec21acd5a4083.html
+  - robots.txt
 
 defaults:
   - scope:
