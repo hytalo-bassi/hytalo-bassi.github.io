@@ -12,6 +12,7 @@ theme: minima
 plugins:
   - jekyll-toc
   - jekyll-feed
+  - jekyll_picture_tag
 
 include:
   - google490ec21acd5a4083.html

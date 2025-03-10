@@ -17,10 +17,10 @@ layout: default
       <li class="posts">
 	<div class="feedcard">
 	{%- if post.image -%}
-  		<img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
+    {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img class="blog-roll-image" %}
 	{%- else -%}
 		{%- assign postImage = "/assets/images/image-default.jpg" -%}
-		<img src="{{- postImage | relative_url -}}" alt="" class="blog-roll-image">
+    {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img class="blog-roll-image" %}
 	{%- endif -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <p class="post-meta">{{ post.date | date: date_format }}</p>
