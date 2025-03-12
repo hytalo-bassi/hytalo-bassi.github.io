@@ -14,6 +14,9 @@ plugins:
   - jekyll-feed
   - jekyll_picture_tag
 
+sass:
+  style: compressed
+
 picture:
   source: "assets/images"
   output: "assets/images/generated"
