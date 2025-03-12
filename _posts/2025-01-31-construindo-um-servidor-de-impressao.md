@@ -4,7 +4,7 @@ date: 2025-01-31 09:39:12 -0400
 toc: true
 layout: post
 categories: server
-image: "/assets/images/server2.jpg"
+image: "server2.jpg"
 ---
 
 Há alguns dias atrás mostrei [como configurar um servidor de arquivos com Samba no Alpine](/server/2025/01/29/construindo-um-servidor-de-arquivos.html) e decidi agora ensinar como criar um servidor de impressão. **Você precisa já ter o Samba instalado e configurado para funcionar**.

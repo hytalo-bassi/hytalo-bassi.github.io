@@ -4,7 +4,7 @@ title: "2 formas de acessar o seu PC pela internet (Ngrok e Tunelamento SSH)"
 categories: vps linux guide remote-access ssh
 tags: ngrok ssh remote-access vps guide
 excerpt: Aprenda como acessar seu PC pela internet utilizando o Ngrok ou túnel SSH com uma VPS. Veja como configurar ambas as ferramentas e melhorar o acesso remoto.
-image: "/assets/images/ssh-tunneling.jpg"
+image: "ssh-tunneling.jpg"
 date: 2025-03-03 19:00:00 -0400
 ---
 

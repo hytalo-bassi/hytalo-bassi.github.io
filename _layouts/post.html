@@ -24,7 +24,7 @@ layout: default
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}</p>
+    {%- endif -%}</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -35,7 +35,7 @@ layout: default
     {%- include disqus_comments.html -%}
   {%- endif -%}
   
-  <button type="button" id="toc-button" class="post-toc-button" onclick="console.log('GHello')">
+  <button type="button" id="toc-button" class="post-toc-button">
     T
   </button>
 

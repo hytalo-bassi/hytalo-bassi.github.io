@@ -4,7 +4,7 @@ date: 12-02-2025 10:00 -04000
 layout: post
 title: "Comandos básicos de Terminal Linux"
 categories: linux study
-image: "/assets/images/terminal.jpg"
+image: "terminal.jpg"
 ---
 
 Uma das coisas que mais assustam os principiantes de Linux é seu terminal. Antigamente, instalar aplicativos, mudar a fonte

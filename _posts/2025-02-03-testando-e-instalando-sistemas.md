@@ -3,7 +3,7 @@ title: "3 formas rápidas de instalar sistemas no Linux + Como usar máquinas vi
 date: 2025-02-03 13:46:00 -0400
 layout: post
 categories: linux guide
-image: "/assets/images/linux.jpg"
+image: "linux.jpg"
 ---
 
 # Introdução
