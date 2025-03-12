@@ -3,111 +3,21 @@
 
 @charset "utf-8";
 
-// Fonts
-
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/woff2/FiraCode-Light.woff2") format("woff2"),
-       url("../fonts/woff/FiraCode-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/woff2/FiraCode-Regular.woff2") format("woff2"),
-       url("../fonts/woff/FiraCode-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/woff2/FiraCode-Medium.woff2") format("woff2"),
-       url("../fonts/woff/FiraCode-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/woff2/FiraCode-SemiBold.woff2") format("woff2"),
-       url("../fonts/woff/FiraCode-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url("../fonts/woff2/FiraCode-Bold.woff2") format("woff2"),
-       url("../fonts/woff/FiraCode-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-// Colors
-
-$primary-700: #081265 !default;
-$primary-500: #3847F0 !default;
-
-$secondary-400: #756D16 !default;
-$secondary-200: #C5B92C !default;
-$secondary-100: #F0E138 !default;
-
-$grey-700: #1F1F24 !default;
-$grey-600: #3E3E45 !default;
-$grey-100: #F1F1F1 !default;
-
-$text-color:       $grey-100 !default;
-$background-color: $grey-700 !default;
-$brand-color:      $primary-500 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
-
-// Typography
-
-$base-font-family: "FiraCode" !default;
-$base-font-size:   20px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-// Units
-
-$spacing-unit:     30px !default;
-
-// ...
-
-$table-text-align: left !default;
-
-// Width of the content area
-$content-width:    1400px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 // Import partials.
+// @import
+//   "minima/base",
+//   "minima/layout",
+//   "minima/syntax-highlighting"
+// ;
+
 @import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
+  "_variables",
+  "_mixins",
+  "minima/base"
 ;
