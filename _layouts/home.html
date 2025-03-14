@@ -1,43 +1,43 @@
 ---
 layout: default
 ---
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-
   {{ content }}
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  <div class="feed">
     <ul class="post-list">
       {%- for post in site.posts -%}
-	<div class="feed">
-      <li class="posts">
-	<div class="feedcard">
-	{%- if post.image -%}
-    {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img class="blog-roll-image" %}
-	{%- else -%}
-		{%- assign postImage = "/assets/images/image-default.jpg" -%}
-    {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img class="blog-roll-image" %}
-	{%- endif -%}
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <p class="post-meta">{{ post.date | date: date_format }}</p>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      </div>
-      {%- endfor -%}
+        <li>
+          <div class="post-thumbnail">
+            {%- if post.image -%}
+            {% picture jpt-webp "{{- post.image |
+              relative_url -}}" --alt "" --img class="blog-roll-image" %}
+            {%- else -%} 
+            {%- assign postImage = "/assets/images/image-default.jpg" -%}
+            {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img
+              class="blog-roll-image" %} {%- endif -%} {%- assign date_format =
+              site.minima.date_format | default: "%b %-d, %Y" -%}
+          </div>
+          <div class="post-info">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+          </div>
+        </li>
+        {%- endfor -%}
     </ul>
-	</div>
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  </div>
+  <p class="rss-subscribe">
+    subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
+  </p>
   {%- endif -%}
-
 </div>
