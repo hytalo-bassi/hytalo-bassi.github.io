@@ -221,8 +221,11 @@
   font-size: $small-font-size;
   margin-bottom: 0px;
   margin-top: 0px;
-  color: $secondary-100;
-  font-weight: 300;
+  font-weight: $font-weight-light;
+
+  @include media-query($on-laptop) {
+    font-size: $base-font-size * 0.4;
+  }
 }
 
 
@@ -309,6 +312,11 @@
   @include media-query($on-desktop) {
     width: calc($spacing-unit * 2.73);
     height: calc($spacing-unit * 2.73);
+  }
+
+  @include media-query($on-laptop) {
+    width: calc($spacing-unit * 3);
+    height: calc($spacing-unit * 3);
   }
 }
 
