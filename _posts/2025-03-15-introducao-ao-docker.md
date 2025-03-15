@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Introdução ao Docker"
+title:  "Introdução ao Docker: O Guia Completo para Iniciantes"
 date:   2025-03-15 18:30:00 -0400
-categories: linux docker 
-image: "server1.jpg"
+categories: linux docker
+description: "Aprenda o que é Docker, como utilizá-lo e criar containers para desenvolvimento eficiente. Guia prático com comandos e exemplos de Dockerfile."
+image: "docker.png" 
 ---
 
-Você trocou seu velho computador e não sabe o que fazer com ele? Pois, então o use como servidor.
 
 ## O que é o Docker?
 
