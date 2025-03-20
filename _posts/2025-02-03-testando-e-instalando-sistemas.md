@@ -1,4 +1,5 @@
 ---
+author: Hytalo M. Bassi
 title: "3 formas rápidas de instalar sistemas no Linux + Como usar máquinas virtuais"
 date: 2025-02-03 13:46:00 -0400
 layout: post

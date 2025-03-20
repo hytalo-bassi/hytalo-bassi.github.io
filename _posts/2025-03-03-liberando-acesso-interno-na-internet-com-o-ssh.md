@@ -1,4 +1,5 @@
 ---
+author: Hytalo M. Bassi
 layout: post
 title: "2 formas de acessar o seu PC pela internet (Ngrok e Tunelamento SSH)"
 categories: vps linux guide remote-access ssh

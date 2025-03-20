@@ -1,9 +1,9 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-title: Hassi
+title: Hassi Blog
 description: >-
-  Something being built here.
+  O seu blog de tecnologia.
 baseurl: ""
 url: "https://hytalo-bassi.github.io" 
 github_username:  hytalo-bassi
