@@ -1,12 +1,14 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
 title: Hassi Blog
 description: >-
   O seu blog de tecnologia.
 baseurl: ""
 url: "https://hytalo-bassi.github.io" 
 github_username:  hytalo-bassi
+
+collections:
+  authors:
+    output: true
+    permalink: author/:title/
 
 theme: minima
 plugins:
@@ -31,3 +33,8 @@ defaults:
       path: ""
     values:
       toc: true
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
