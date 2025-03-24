@@ -1,5 +1,5 @@
 ---
-author: Michel Leonardo
+authors: michel_leonardo
 layout: post
 title:  "Introdução a Redes: Modelos de Rede e Modelo OSI"
 date:   2025-03-17 18:30:00 -0400
