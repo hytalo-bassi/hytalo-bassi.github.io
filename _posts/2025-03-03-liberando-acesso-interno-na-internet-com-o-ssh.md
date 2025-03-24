@@ -7,6 +7,7 @@ tags: ngrok ssh remote-access vps guide
 excerpt: Aprenda como acessar seu PC pela internet utilizando o Ngrok ou túnel SSH com uma VPS. Veja como configurar ambas as ferramentas e melhorar o acesso remoto.
 image: "ssh-tunneling.jpg"
 date: 2025-03-03 19:00:00 -0400
+authors: hytalo_bassi
 ---
 
 Muitas vezes precisamos demonstrar como está ficando um site pro cliente de forma online. E enviar um vídeo ou print não passa muita confiança. Por isso, compartilhamos nosso serviço como se já estivesse em produção para verem com um simples link. Ou se você é que nem eu, fez um servidor local e seu provedor bloqueou o **direcionamento de portas**, você pode ainda assim acessar seu servidor de qualquer lugar do mundo usando túneis SSH e uma VPS.

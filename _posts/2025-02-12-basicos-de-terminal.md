@@ -5,6 +5,7 @@ layout: post
 title: "Comandos básicos de Terminal Linux"
 categories: linux study
 image: "terminal.jpg"
+authors: hytalo_bassi
 ---
 
 Uma das coisas que mais assustam os principiantes de Linux é seu terminal. Antigamente, instalar aplicativos, mudar a fonte

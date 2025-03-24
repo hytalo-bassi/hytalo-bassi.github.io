@@ -5,6 +5,7 @@ date: 2025-02-03 13:46:00 -0400
 layout: post
 categories: linux guide
 image: "linux.jpg"
+authors: hytalo_bassi
 ---
 
 # Introdução

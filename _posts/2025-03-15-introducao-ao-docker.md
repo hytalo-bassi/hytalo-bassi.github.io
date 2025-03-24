@@ -6,6 +6,7 @@ date:   2025-03-15 18:30:00 -0400
 categories: linux docker
 description: "Aprenda o que é Docker, como utilizá-lo e criar containers para desenvolvimento eficiente. Guia prático com comandos e exemplos de Dockerfile."
 image: "docker.png" 
+authors: hytalo_bassi
 ---
 
 
