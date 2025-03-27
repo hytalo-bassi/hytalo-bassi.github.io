@@ -28,6 +28,9 @@ include:
   - google490ec21acd5a4083.html
   - robots.txt
 
+exclude:
+  - README.md
+
 defaults:
   - scope:
       path: ""
