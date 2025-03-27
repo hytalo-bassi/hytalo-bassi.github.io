@@ -1,23 +1,20 @@
 ---
 ---
 
-@charset "utf-8";
-
 %clearfix:after {
-  content: "";
-  display: table;
   clear: both;
+  content: '';
+  display: table;
 }
 
 // Import partials.
 // @import
-//   "minima/base",
-//   "minima/layout",
-//   "minima/syntax-highlighting"
+//   'minima/base',
+//   'minima/layout',
+//   'minima/syntax-highlighting'
 // ;
 
 @import
-  "_variables",
-  "_mixins",
-  "minima/base"
-;
+  'variables',
+  'mixins',
+  'minima/base';

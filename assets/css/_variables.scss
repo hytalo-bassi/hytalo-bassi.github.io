@@ -1,7 +1,7 @@
 // Colors
 
 $primary-700: #081265 !default;
-$primary-500: #3847F0 !default;
+$primary-500: #3847f0 !default;
 
 $secondary-400: #756D16 !default;
 $secondary-200: #C5B92C !default;
@@ -21,7 +21,7 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Typography
 
-$base-font-family: "FiraCode" !default;
+$base-font-family: 'FiraCode' !default;
 $base-font-size:   20px !default;
 
 $font-weight-light: 300 !default;
@@ -29,7 +29,7 @@ $font-weight-regular: 400 !default;
 $font-weight-bold: 700 !default;
 
 
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size:  $base-font-size * .875 !default;
 $base-line-height: 1.5 !default;
 
 // Units
