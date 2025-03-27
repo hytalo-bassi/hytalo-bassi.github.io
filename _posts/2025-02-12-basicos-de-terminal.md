@@ -1,5 +1,4 @@
 ---
-author: Hytalo M. Bassi
 date: 12-02-2025 10:00 -04000
 layout: post
 title: "Comandos básicos de Terminal Linux"

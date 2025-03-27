@@ -1,5 +1,4 @@
 ---
-author: Hytalo M. Bassi
 layout: post
 title:  "Introdução ao Docker: O Guia Completo para Iniciantes"
 date:   2025-03-15 18:30:00 -0400

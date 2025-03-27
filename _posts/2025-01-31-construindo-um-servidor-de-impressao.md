@@ -1,5 +1,4 @@
 ---
-author: Hytalo M. Bassi
 title: "Como construir um Servidor de Impressão no Alpine com Samba e Cups"
 date: 2025-01-31 09:39:12 -0400
 toc: true

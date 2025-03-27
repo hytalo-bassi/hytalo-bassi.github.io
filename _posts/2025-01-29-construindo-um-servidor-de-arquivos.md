@@ -1,5 +1,4 @@
 ---
-author: Hytalo M. Bassi
 layout: post
 title:  "Como construir um servidor de arquivos com Alpine Linux"
 date:   2025-01-29 14:54:00 -0400
