@@ -1,69 +1,84 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+//Reset some basic elements
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
 
-/**
- * Basic styling
- */
+//Basic styling
 body {
-  font: $font-weight-regular #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
   background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  min-height: 100vh;
+  color: $text-color;
+
   flex-direction: column;
+
+  font: $font-weight-regular #{$base-font-size}/#{$base-line-height} $base-font-family;
+  // -webkit-text-size-adjust: 100%;
+  // -webkit-font-feature-settings: "kern" 1;
+  // -moz-font-feature-settings: "kern" 1;
+  // -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+
+  min-height: 100vh;
 }
 
 
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+//Set `margin-bottom` to maintain vertical rhythm
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * 0.93;
+  margin-bottom: calc($spacing-unit * .93);
 
   @include media-query($on-laptop) {
-    margin-bottom: $spacing-unit * 0.73;
+    margin-bottom: calc($spacing-unit * .73);
   }
 }
 
 
 
-/**
- * `main` element
- */
+// `main` element
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: block; // Default value of `display` of `main` element is 'inline' in IE 11.
 }
 
 
 
-/**
- * Images
- */
+// Images
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/**
- * Lists
- */
-ul, ol {
+// Lists
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
@@ -76,47 +91,49 @@ li {
 
 
 
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $font-weight-regular;
 }
 
-/**
- * Wrapper
- */
+// Wrapper
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit * 4.5;
-  padding-left: $spacing-unit * 4.5;
-  position: relative;
-  overflow-x: hidden;
   @extend %clearfix;
 
+  // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+
+  overflow-x: hidden;
+
+  padding-left: $spacing-unit * 4.5;
+  padding-right: $spacing-unit * 4.5;
+
+  position: relative;
+
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2 ;
+    // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
   }
 }
 
-
-/**
- * Icons
- */
-
+// Icons
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
-    vertical-align: text-top;
+  display: inline-block;
+  fill: #{$grey-color};
+  height: 16px;
+  padding-right: 5px;
+  vertical-align: text-top;
+  width: 16px;
 }
 
 .social-media-list {

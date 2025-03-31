@@ -11,9 +11,17 @@ $grey-700: #1F1F24 !default;
 $grey-600: #3E3E45 !default;
 $grey-100: #F1F1F1 !default;
 
-$text-color:       $grey-100 !default;
-$background-color: $grey-700 !default;
-$brand-color:      $primary-500 !default;
+$text-color:            $grey-100 !default;
+$link-visited-color:    $grey-100 !default;
+$background-color:      $grey-700 !default;
+$brand-color:           $primary-500 !default;
+
+$highlight-color:       $grey-100 !default;
+$code-border-color:     $grey-600 !default;
+$blockquote-text-color: $grey-100 !default;
+
+// $highlight-color:  #454646 !default;
+
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
