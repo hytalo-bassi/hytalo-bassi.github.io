@@ -15,7 +15,7 @@ layout: default
       {% if page_authors %}
         *
         {% for author in site.authors %}
-          {% if (page_authors contains author.username or author.username == page_authors) %}
+          {% if page_authors contains author.username or author.username == page_authors %}
             {% if is_first %}
               <span>{{ author.name }}</span>
             {% assign is_first = false %}
