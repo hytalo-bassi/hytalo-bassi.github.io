@@ -429,9 +429,8 @@
 .about-self {
   align-content: center;
   padding-left: calc($spacing-unit * 1.66);
-  width: 100%;
   text-align: justify;
-  align-content: center;
+  width: 100%;
 
   @include media-query($on-big-laptop) {
     padding: 0;
@@ -493,11 +492,7 @@
   }
 
   * > h2 {
-    margin-top: calc($spacing-unit * 0.66);
-    white-space: nowrap;
     font-size: 24px;
-
-  * > h2 {
     font-weight: bold;
     margin-top: calc($spacing-unit * .66);
     white-space: nowrap;
