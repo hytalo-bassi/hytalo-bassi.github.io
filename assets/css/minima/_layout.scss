@@ -496,6 +496,8 @@
     margin-top: calc($spacing-unit * 0.66);
     white-space: nowrap;
     font-size: 24px;
+
+  * > h2 {
     font-weight: bold;
     margin-top: calc($spacing-unit * .66);
     white-space: nowrap;
