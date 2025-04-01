@@ -41,3 +41,4 @@ defaults:
       type: authors
     values:
       layout: author
+      output: true

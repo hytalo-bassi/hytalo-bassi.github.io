@@ -429,7 +429,13 @@
 .about-self {
   align-content: center;
   padding-left: calc($spacing-unit * 1.66);
+  width: 100%;
   text-align: justify;
+  align-content: center;
+
+  @include media-query($on-big-laptop) {
+    padding: 0;
+  }
 }
 
 .container {
@@ -439,6 +445,11 @@
   margin-bottom: calc($spacing-unit * .5);
 
   width: 100%;
+
+  @include media-query($on-big-laptop) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .row {
@@ -457,6 +468,11 @@
   border-radius: 100%;
   max-height: calc($spacing-unit * 6.06);
   max-width: calc($spacing-unit * 6.06);
+  padding: 0 calc($spacing-unit * 2.73);
+
+  @include media-query($on-big-laptop) {
+    padding: 0;
+  }
 }
 
 .banner {
@@ -471,6 +487,15 @@
   text-align: center;
 
   width: min-content;
+
+  @include media-query($on-big-laptop) {
+    width: 100%;
+  }
+
+  * > h2 {
+    margin-top: calc($spacing-unit * 0.66);
+    white-space: nowrap;
+    font-size: 24px;
 
   * > h2 {
     font-weight: bold;
