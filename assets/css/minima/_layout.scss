@@ -198,7 +198,24 @@
   font-weight: 700;
 }
 
-.post-list {
+
+hr.rounded {
+  border-top: 8px solid #2B2B32;
+  border-radius: 5px;
+}
+
+.post-item:first-of-type {
+    background: #2C2C33;
+    
+}
+
+.post-list-network {
+    margin-top: 30px;
+}
+
+
+.post-list, .post-list-network {
+  margin-left: 0;
   list-style: none;
   margin-left: 0;
 
