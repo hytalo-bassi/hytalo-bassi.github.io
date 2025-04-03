@@ -7,7 +7,7 @@ bio: Sou um estudante de Ciênc. da Computação na Universidade Católica de Br
 permalink: /authors/michel_leonardo
 github: https://github.com/Xelckis
 linkedin: https://www.linkedin.com/in/michel-leonardo-892359357/
-image: avatar_michel.jpg
+image: "avatar_michel.jpg"
 ---
 
 Meu principal interesse reside na área de Segurança Ofensiva, dedico-me a explorar técnicas de ataque e defesa com o objetivo de compreender as vulnerabilidades de sistemas e aplicações. O meu objetivo nesse blog é compartilhar o meu conhecimento adquirido ao longo da minha jornada acadêmica e minhas reflexões sobre o dinâmico campo da tecnologia. Além da Ciência da Computação, possuo também paixão pela Matemática e pela Comunicação, buscando sempre apresentar informações de forma clara e precisa.
