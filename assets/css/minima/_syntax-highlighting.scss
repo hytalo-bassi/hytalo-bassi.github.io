@@ -4,10 +4,10 @@
 .highlight {
   @extend %vertical-rhythm;
 
-  background: $grey-100;
+  background: $highlight-background;
 
   .highlighter-rouge & {
-    background: #eef;
+    background: $highlight-background;
   }
 
   .c {
