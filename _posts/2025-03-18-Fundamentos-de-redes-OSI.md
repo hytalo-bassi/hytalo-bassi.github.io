@@ -3,9 +3,11 @@ authors: michel_leonardo
 layout: post
 title:  "Introdução a Redes: Modelos de Rede e Modelo OSI"
 date:   2025-03-17 18:30:00 -0400
-categories: redes
+categories: CyberSecurity Networks
 description: "Aprenda o que é um Modelo de Rede e entenda de vez por todas o que é o famoso Modelo OSI"
-image: "server3.jpg" 
+image: "server3.jpg"
+redirect_from:
+    - /redes/2025/03/17/Fundamentos-de-redes-OSI.html
 ---
 ## O que é um Modelo de Rede?
 
