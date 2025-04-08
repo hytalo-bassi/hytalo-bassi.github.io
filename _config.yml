@@ -12,6 +12,7 @@ collections:
 
 theme: minima
 plugins:
+  - jekyll-redirect-from
   - jekyll-toc
   - jekyll-feed
   - jekyll_picture_tag
