@@ -264,6 +264,7 @@ hr.rounded {
 
 .post-meta {
   font-size: $small-font-size;
+  color: $post-meta-color;
   font-weight: $font-weight-light;
   margin-bottom: 0;
   margin-top: 0;
@@ -481,41 +482,6 @@ hr.rounded {
 }
 
 .hidden { display: none; }
-
-.blur { filter: blur(4px); }
-
-.toc {
-  background: $background-color;
-  border: 1px solid $grey-100;
-  border-radius: 10px;
-
-  // scss-lint:disable ColorVariable
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, .75));
-
-  margin: auto $spacing-unit * 4.5;
-  padding: $spacing-unit * 2.6 $spacing-unit * 1.8;
-  width: 100%;
-
-  @include media-query($on-laptop) {
-    margin: $spacing-unit * 6.8 $spacing-unit / 2 auto;
-    padding: $spacing-unit * 4.8 $spacing-unit * .2666;
-  }
-
-  .close {
-    background-color: transparent;
-    border-color: transparent;
-    color: $grey-100;
-
-    display: flex;
-
-    height: auto;
-    justify-content: end;
-    text-align: center;
-
-    width: 100%;
-  }
-}
-
 
 .about-self {
   align-content: center;
