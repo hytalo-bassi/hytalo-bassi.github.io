@@ -4,6 +4,10 @@ layout: default
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+{% assign post_categories = "SoftwareDevelopment, CyberSecurity, AI_n_ML, Data Analysis, CloudComputing, Blockchain, IoT, AR_n_VR, Game" | split: ", " %}
+
+
 <div class="home">
   {%- if page.title -%}
   <h1 class="page-heading">{{ page.title }}</h1>
@@ -46,42 +50,49 @@ layout: default
         {%- endfor -%}
     </ul>
 
-    <hr class="rounded">
+    {% for item in post_categories %}
+      <hr class="rounded">
+      <h2 class="post-list-heading">{{ item }}</h2>
 
-     <ul class="post-list-network">
-      {% for post in site.posts limit:3 %}
-      {%- if post.categories -%}
-        <li class="post-item">
-          <div class="post-thumbnail">
-            {%- if post.image -%}
-            {% picture jpt-webp "{{- post.image |
-              relative_url -}}" --alt "" --img class="blog-roll-image" %}
-            {%- else -%} 
-            {%- assign postImage = "/assets/images/image-default.jpg" -%}
-            {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img
-              class="blog-roll-image" %} 
-            {%- endif -%}
+      <ul class="post-list-categories">
+          
+      {% for post in site.posts limit:4 %}
+          {%- if post.categories -%}
+
+            <li class="post-item-categories">
+              <div class="post-thumbnail-categories">
+                {%- if post.image -%}
+                  {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img class="blog-roll-image-categories" %}
+                {%- else -%} 
+                  {%- assign postImage = "/assets/images/image-default.jpg" -%}
+                  {% picture jpt-webp "{{- post.image | relative_url -}}" --alt "" --img
+                  class="blog-roll-image" %} 
+                {%- endif -%}
             
-          </div>
-            <div class="post-info">
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-              {{ post.date | date: date_format }}  | {{ post.categories }} 
-            </time>
+                </div>
+                  <div class="post-info-categories">
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                      {{ post.date | date: date_format }}  | {{ post.categories }} 
+                    </time>
  
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            <p class="post-meta">
-              {{ post.content | strip_html | truncatewords: 20}}
-            </p>
-          </div>
-        </li>
-        {%- endif -%}
-      {%- endfor -%}
-    </ul>
+                    <h3>
+                      <a class="post-link-categories" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                      </a>
+                    </h3>
+                    <p class="post-meta-categories">
+                      {{ post.content | strip_html | truncatewords: 20}}
+                    </p>
+                  </div>
+                </li>
+            {% else %}
+              <h3>Ainda não há posts aqui</h3>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {% endfor %}
+
   </div>
   <p class="rss-subscribe">
     subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>

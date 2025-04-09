@@ -204,17 +204,35 @@ hr.rounded {
   border-radius: 5px;
 }
 
-.post-item:first-of-type {
+.post-item-categories:first-of-type {
     background: #2C2C33;
+    padding: 15px;
+
     
 }
 
-.post-list-network {
+.post-list-categories {
     margin-top: 30px;
+   margin-left: 0;
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: calc($spacing-unit * 2.53);
+    height: min-content;
+    padding: calc($spacing-unit * .26) 0;
+    width: 100%;
+
+    @include media-query($on-desktop) {
+      gap: calc($spacing-unit * .6);
+    }
+  }
 }
 
 
-.post-list, .post-list-network {
+.post-list {
   margin-left: 0;
   list-style: none;
   margin-left: 0;
@@ -230,6 +248,17 @@ hr.rounded {
     @include media-query($on-desktop) {
       gap: calc($spacing-unit * .6);
     }
+  }
+}
+
+.post-meta-categories {
+  font-size: $small-font-size;
+  font-weight: $font-weight-light;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @include media-query($on-laptop) {
+    font-size: $base-font-size * .4;
   }
 }
 
@@ -292,6 +321,25 @@ hr.rounded {
   }
 }
 
+.post-info-categories {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: calc($spacing-unit * .26);
+
+  > h3 {
+    font-size: 36px;
+    font-weight: 700;
+    max-width: 100%;
+    text-overflow: '...';
+
+    @include media-query($on-desktop) {
+      font-size: 20px;
+    }
+  }
+}
+
+
 .post-info {
   display: flex;
   flex: 1;
@@ -310,11 +358,37 @@ hr.rounded {
   }
 }
 
+.post-thumbnail-categories {
+  height: 100%;
+
+  > picture {
+    height: min-content;
+  }
+}
+
+
 .post-thumbnail {
   height: 100%;
 
   > picture {
     height: min-content;
+  }
+}
+
+.blog-roll-image-categories {
+  border-radius: 10px;
+
+  height: calc($spacing-unit * 10.6);
+  width: calc($spacing-unit * 13.8);
+
+  @include media-query($on-desktop) {
+    height: calc($spacing-unit * 2.73);
+    width: calc($spacing-unit * 2.73);
+  }
+
+  @include media-query($on-laptop) {
+    height: calc($spacing-unit * 3);
+    width: calc($spacing-unit * 3);
   }
 }
 
@@ -496,7 +570,7 @@ hr.rounded {
   flex-direction: column;
 
   height: min-content;
-  justify-content: center;
+  justify-content: start;
 
   padding: 0 4px;
 
