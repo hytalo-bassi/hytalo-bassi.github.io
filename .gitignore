@@ -4,3 +4,12 @@ _site
 .jekyll-metadata
 vendor
 Gemfile.lock
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.pnp.*
+.yarn/**/*
