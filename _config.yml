@@ -31,6 +31,7 @@ include:
 
 exclude:
   - README.md
+  - tests/
 
 valid_categories:
   SoftwareDevelopment:
