@@ -560,3 +560,173 @@ hr.rounded {
   border-bottom: calc($spacing-unit * .1) solid $grey-100;
   margin-bottom: calc($spacing-unit * .5);
 }
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.s-14 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.s-20 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.s-28 {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: max-content;
+}
+
+.h-274 {
+  height: 274px !important;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-12 {
+  margin-bottom: 12px !important;
+}
+
+.mb-48 {
+  margin-bottom: 48px !important;
+}
+
+.my-12 {
+  margin: 12px 0 !important;
+}
+
+.pb-12 {
+  padding-bottom: 12px !important;
+}
+
+.px-12 {
+  padding: 0 12px !important;
+}
+
+.flex-column {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-100 {
+  font-weight: 100;
+}
+
+.b-bottom-grey-600 {
+  border-bottom: 5px solid $grey-600;
+}
+
+.b-radius-10 {
+  border-radius: 10px;
+}
+
+.tag {
+  border-radius: 5px;
+  background: $grey-600;
+  height: min-content;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.row-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid $grey-600;
+  border-radius: 10px;
+  height: max-content !important;
+  min-width: 250px;
+  width: auto !important;
+  overflow: hidden;
+  display: flex !important;
+  flex-direction: column !important;
+  text-overflow: ellipsis;
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: anywhere;
+}
+
+// Webkit
+.overflow-x-scrollbar-hide::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.overflow-x-scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.gap-20 {
+  gap: 20px;
+}

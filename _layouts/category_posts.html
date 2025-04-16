@@ -1,14 +1,71 @@
 ---
-layout: default
+layout: root
 ---
 
-<section class="category-section">
-  <h1 class="page-heading">{{ page.title }}</h1>
-  <div class="feed">
-    <ul class="post-list">
-        {% for post in site.posts %} {% if post.categories contains page.category %}
-            {% include post_item.html post=post %}
-        {% endif %} {% endfor %}
-    </ul>
-  </div>
-</section>
+{%- include head.html -%}
+<script>
+  const taggedItems = {}
+
+  window.addEventListener('load', function() {
+    const postItems = document.querySelectorAll("li[data-post-category]")
+
+    postItems.forEach((postElem) => {
+      const tags = postElem.getAttribute("data-post-tags").split(" ")
+      
+      if (tags.length === 0) {
+        if (taggedItems['no-tags']) taggedItems['no-tags'].push(postElem)
+        else taggedItems['no-tags'] = [postElem]
+        return
+      }
+
+      tags.forEach((tag) => {
+        if (taggedItems[tag]) {
+          taggedItems[tag].push(postElem)
+        } else {
+          taggedItems[tag] = [postElem]
+        }
+      })
+    })
+  });
+</script>
+
+<body class="wrapper">
+  {%- include header.html -%}
+  <main class="page-content" aria-label="Content">
+    <h1 class="page-heading post-title">{{ page.title }}</h1>
+    <div class="content" style="display: flex; flex-direction: row;">
+      <aside style="max-width: 370px; padding-left: 66px; padding-right: 34px;" class="weight-500">
+        <div class="s-14 b-bottom-grey-600 mb-12 pb-12" style="padding: 0 10px;">
+          <p class="m-0">Filtros:</p>
+          <p class="m-0 w-max">Pesquisar postagens por título</p>
+          <input 
+            class="w-full bg-transparent border-box"
+            style="border: solid 1px grey"
+            id="title-filter"
+            name="title-filter"/>
+        </div>
+        <div class="flex-column">
+          <p class="s-14 m-0">Tags</p>
+          {% comment %}
+          {% for subcategory in site.valid_categories[page.category] %}
+            <div>
+              <input type="checkbox" id="{{ subcategory }}" name="{{ subcategory }}" checked />
+              <label for="{{ subcategory }}" class="s-14">{{ subcategory }}</label>
+            </div>
+          {% endfor %}
+          {% endcomment%}
+        </div>
+      </aside>
+      <div class="feed">
+        <ul class="post-list grid grid-2-cols gap-20 px-12">
+          {% for post in site.posts %}
+            {% if post.categories contains page.category %}
+              {% include small_post_item.html post=post %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </main>
+  {%- include footer.html -%}
+</body>

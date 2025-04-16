@@ -16,38 +16,38 @@ categories:
 
 <div class="home">
   {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
   {%- endif -%}
   {{ content }}
   {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <div class="feed">
-    <ul class="post-list">
-      {% for post in site.posts limit:3 %}
-        {% include post_item.html post=post %}
-      {%- endfor -%}
-    </ul>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <div class="feed">
+      <ul class="post-list">
+        {% for post in site.posts limit:3 %}
+          {% include post_item.html post=post %}
+        {%- endfor -%}
+      </ul>
 
-    <!-- Observa todas as categorias, inclusive as sub-categorias -->
-    {% for category in site.categories %}
-      {% assign key = category[0] %}
+      <!-- Observa todas as categorias, inclusive as sub-categorias -->
+      {% for category in site.categories %}
+        {% assign key = category[0] %}
 
-      <!-- Descarta da impressão qualquer sub-categoria -->
-      {% if site.valid_categories[key] %}
-        {% if category[1].size > 0 %}
-          <hr class="rounded">
-          <h2 class="post-list-heading">{{ key }}</h2>
-          <ul class="post-list-categories">
-            {% for post in category[1] %}
-              {% include post_item.html post=post is_category=true %}
-            {% endfor %}
-          </ul>
+        <!-- Descarta da impressão qualquer sub-categoria -->
+        {% if site.valid_categories[key] %}
+          {% if category[1].size > 0 %}
+            <hr class="rounded">
+            <a href="/categories/{{key}}"><h2 class="post-list-heading">{{ key }}</h2></a>
+            <ul class="post-list-categories">
+              {% for post in category[1] %}
+                {% include post_item.html post=post is_category=true %}
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-  <p class="rss-subscribe">
-    subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
-  </p>
+      {% endfor %}
+    </div>
+    <p class="rss-subscribe">
+      subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
+    </p>
   {%- endif -%}
 </div>
