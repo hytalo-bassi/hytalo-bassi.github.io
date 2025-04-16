@@ -3,11 +3,11 @@
         {%- if include.post.image -%}
             {% picture jpt-webp "{{- include.post.image | relative_url -}}"
                 --alt "" 
-                --img class="blog-roll-image{% if include.is_category %}-categories{% endif %}" %}
+                --img class="blog-roll-image-categories" %}
         {%- else -%}
             {%- assign postImage = "/assets/images/image-default.jpg" -%}
-            {% picture jpt-webp "{{- include.post.image | relative_url -}}"
-            --alt "" --img class="blog-roll-image{% if include.is_category %}-categories{% endif %}" %}
+            {% picture jpt-webp "{{- postImage | relative_url -}}"
+            --alt "" --img class="blog-roll-image-categories" %}
         {%- endif -%}
     </div>
     <div class="post-info{% if include.is_category %}-categories{% endif %}">

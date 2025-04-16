@@ -43,10 +43,11 @@ categories:
           <ul class="post-list-categories">
             {% for post in category[1] %}
               {% include post_item.html post=post is_category=true %}
-            {% endfor %}
+            {%- endfor -%}
           </ul>
         {% endif %}
-      {% endfor %}
+        {% endif %}
+      {%- endfor -%}
     </div>
     <p class="rss-subscribe">
       subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a>
