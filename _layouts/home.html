@@ -32,17 +32,19 @@ categories:
       {% for category in site.categories %}
         {% assign key = category[0] %}
 
-        <!-- Descarta da impressão qualquer sub-categoria -->
-        {% if site.valid_categories[key] %}
-          {% if category[1].size > 0 %}
-            <hr class="rounded">
-            <a href="/categories/{{key}}"><h2 class="post-list-heading">{{ key }}</h2></a>
-            <ul class="post-list-categories">
-              {% for post in category[1] %}
-                {% include post_item.html post=post is_category=true %}
-              {% endfor %}
-            </ul>
-          {% endif %}
+      <!-- Descarta da impressão qualquer sub-categoria -->
+      {% if site.valid_categories[key] %}
+        {% if category[1].size > 0 %}
+          <hr class="rounded">
+    <div class="section-header">
+          <h2 class="post-list-heading">{{ key }}</h2>
+          <a href="/categories/{{ key }}" class="see-all"> Ver Tudo</a>
+    </div>
+          <ul class="post-list-categories">
+            {% for post in category[1] %}
+              {% include post_item.html post=post is_category=true %}
+            {% endfor %}
+          </ul>
         {% endif %}
       {% endfor %}
     </div>
