@@ -4,6 +4,7 @@ description: >-
 baseurl: ""
 url: "https://hytalo-bassi.github.io" 
 github_username:  hytalo-bassi
+lang: pt
 
 collections:
   authors:
