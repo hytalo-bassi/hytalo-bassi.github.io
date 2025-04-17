@@ -325,15 +325,16 @@ hr.rounded {
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  font-size: clamp(1.2rem, 5vw, 3rem);
+  // @include relative-font-size(2.625);
   color: $brand-color;
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 1;
 
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
+  // @include media-query($on-laptop) {
+  //   @include relative-font-size(2.25);
+  // }
 }
 
 .post-content {
@@ -640,6 +641,10 @@ hr.rounded {
   width: max-content;
 }
 
+.maxw-340 {
+  max-width: 340px !important;
+}
+
 .h-274 {
   height: 274px !important;
 }
@@ -665,20 +670,50 @@ hr.rounded {
 }
 
 .pb-12 {
-  padding-bottom: 12px !important;
+  padding-bottom: 12px;
+}
+
+.before-desktop-px-0 {
+  @include media-query($on-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .px-12 {
-  padding: 0 12px !important;
+  padding: 0 12px;
+}
+
+.px-10 {
+  padding: 0 10px;
 }
 
 .pr-0 {
-  padding-right: 0 !important;
+  padding-right: 0;
+}
+
+.pr-34 {
+  padding-right: 34px;
+}
+
+.pl-66 {
+  padding-left: 66px;
 }
 
 .flex-column {
   display: flex !important;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.before-desktop-flex-column {
+  @include media-query($on-desktop) {
+    flex-direction: column !important;
+  }
 }
 
 .border-box {
@@ -777,4 +812,31 @@ hr.rounded {
 
 .gap-20 {
   gap: 20px;
+}
+
+.aside-desktop-before-mobile {
+  max-width: 340px;
+  padding-left: 66px;
+  padding-right: 34px;
+  font-weight: 500;
+
+  @include media-query($on-desktop) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.feed-when-categorized {
+  display: grid;
+  padding: 0 12px;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  @include media-query($on-desktop) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0;
+  }
 }

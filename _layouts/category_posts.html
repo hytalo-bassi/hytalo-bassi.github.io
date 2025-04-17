@@ -31,9 +31,9 @@ no_right_padding: true
 </script>
 
 <h1 class="page-heading post-title">{{ page.title }}</h1>
-<div class="content" style="display: flex; flex-direction: row;">
-  <aside style="max-width: 370px; padding-left: 66px; padding-right: 34px;" class="weight-500">
-    <div class="s-14 b-bottom-grey-600 mb-12 pb-12" style="padding: 0 10px;">
+<div class="content flex-row before-desktop-flex-column">
+  <aside class="aside-desktop-before-mobile">
+    <div class="s-14 b-bottom-grey-600 mb-12 pb-12 px-10">
       <p class="m-0">Filtros:</p>
       <p class="m-0 w-max">Pesquisar postagens por título</p>
       <input 
@@ -55,7 +55,7 @@ no_right_padding: true
     </div>
   </aside>
   <div class="feed">
-    <ul class="post-list grid grid-2-cols gap-20 px-12">
+    <ul class="post-list feed-when-categorized">
       {% for post in site.posts %}
         {% if post.categories contains page.category %}
           {% include small_post_item.html post=post %}
