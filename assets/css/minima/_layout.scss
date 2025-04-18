@@ -383,12 +383,15 @@ hr.rounded {
   }
 }
 
+.post-list-categories li:not(:first-child) .post-meta-categories {
+  display: none;
+}
 
 .post-info {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: calc($spacing-unit * .26);
+  gap: calc($spacing-unit * .6);
 
   > h3 {
     font-size: 36px;
@@ -419,7 +422,7 @@ hr.rounded {
   }
 }
 
-.blog-roll-image-categories {
+.post-list-categories li:not(:first-child) .blog-roll-image-categories {
   border-radius: 10px;
 
   height: 130px/*calc($spacing-unit * 10.6)*/;
@@ -438,7 +441,7 @@ hr.rounded {
 
 
 
-.blog-roll-image {
+.blog-roll-image-categories {
   border-radius: 10px;
 
   height: calc($spacing-unit * 10.6);
