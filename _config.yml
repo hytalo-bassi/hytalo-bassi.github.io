@@ -5,6 +5,8 @@ baseurl: ""
 url: "https://hytalo-bassi.github.io" 
 github_username:  hytalo-bassi
 lang: pt
+header_pages:
+  - about.md
 
 collections:
   authors:
