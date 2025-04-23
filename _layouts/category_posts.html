@@ -3,33 +3,6 @@ layout: default
 no_right_padding: true
 ---
 
-{%- include head.html -%}
-<script>
-  const taggedItems = {}
-
-  window.addEventListener('load', function() {
-    const postItems = document.querySelectorAll("li[data-post-category]")
-
-    postItems.forEach((postElem) => {
-      const tags = postElem.getAttribute("data-post-tags").split(" ")
-      
-      if (tags.length === 0) {
-        if (taggedItems['no-tags']) taggedItems['no-tags'].push(postElem)
-        else taggedItems['no-tags'] = [postElem]
-        return
-      }
-
-      tags.forEach((tag) => {
-        if (taggedItems[tag]) {
-          taggedItems[tag].push(postElem)
-        } else {
-          taggedItems[tag] = [postElem]
-        }
-      })
-    })
-  });
-</script>
-
 <h1 class="page-heading post-title">{{ page.title }}</h1>
 <div class="content flex-row before-desktop-flex-column">
   <aside class="aside-desktop-before-mobile">
@@ -43,19 +16,18 @@ no_right_padding: true
         name="title-filter"/>
     </div>
     <div class="flex-column">
-      <p class="s-14 m-0">Tags</p>
-      {% comment %}
+      <p class="s-14 m-0">Sub-categorias</p>
       {% for subcategory in site.valid_categories[page.category] %}
         <div>
-          <input type="checkbox" id="{{ subcategory }}" name="{{ subcategory }}" checked />
+          <input data-post-filter-check data-post-filter-subcategory type="checkbox" id="{{ subcategory }}" name="{{ subcategory }}" checked />
           <label for="{{ subcategory }}" class="s-14">{{ subcategory }}</label>
         </div>
       {% endfor %}
-      {% endcomment%}
+      <button name="apply-filter">Aplicar Filtro</button>
     </div>
   </aside>
   <div class="feed">
-    <ul class="post-list feed-when-categorized">
+    <ul data-post-filter class="post-list feed-when-categorized">
       {% for post in site.posts %}
         {% if post.categories contains page.category %}
           {% include small_post_item.html post=post %}
@@ -64,3 +36,5 @@ no_right_padding: true
     </ul>
   </div>
 </div>
+<script src="/assets/js/filter-posts.js">
+</script>

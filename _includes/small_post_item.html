@@ -1,6 +1,7 @@
 {% assign post = post.categories %}
 <li 
     class="card"
+    data-post-title="{{ post.title }}"
     data-post-category="{{ post.categories[0] }}"
     data-post-subcategory="{% if post.categories[1] %}{{ post.categories[1] }}{% endif %}"
     data-post-tags="{% if post.tags %}{{ post.tags | join: ' ' }}{% endif %}" >

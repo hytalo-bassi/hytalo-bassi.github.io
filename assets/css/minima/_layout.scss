@@ -529,7 +529,7 @@ hr.rounded {
   text-align: center;
 }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 .about-self {
   align-content: center;
