@@ -7,6 +7,7 @@ bio: Sou um Estudante de Eng. da Computação na Universidade Federal do Mato Gr
 linkedin: https://www.linkedin.com/in/hytalo-bassi-2a8973319/
 github: https://github.com/hytalo-bassi/
 permalink: /authors/hytalo_bassi
+title: Hytalo Bassi
 ---
 
 Meu propósito é ajudar quem tem vontade de aprender e mudar o mundo ao seu redor. Assim como eu, muitas pessoas

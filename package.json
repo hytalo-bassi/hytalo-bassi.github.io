@@ -1,0 +1,8 @@
+{
+  "name": "hytalo-bassi.github.io",
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  }
+}

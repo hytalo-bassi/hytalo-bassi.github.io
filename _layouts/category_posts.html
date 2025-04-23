@@ -1,0 +1,40 @@
+---
+layout: default
+no_right_padding: true
+---
+
+<h1 class="page-heading post-title">{{ page.title }}</h1>
+<div class="content flex-row before-desktop-flex-column">
+  <aside class="aside-desktop-before-mobile">
+    <div class="s-14 b-bottom-grey-600 mb-12 pb-12 px-10">
+      <p class="m-0">Filtros:</p>
+      <p class="m-0 w-max">Pesquisar postagens por título</p>
+      <input 
+        class="w-full bg-transparent border-box"
+        style="border: solid 1px grey; color: white;"
+        id="title-filter"
+        name="title-filter"/>
+    </div>
+    <div class="flex-column">
+      <p class="s-14 m-0">Sub-categorias</p>
+      {% for subcategory in site.valid_categories[page.category] %}
+        <div>
+          <input data-post-filter-check data-post-filter-subcategory type="checkbox" id="{{ subcategory }}" name="{{ subcategory }}" checked />
+          <label for="{{ subcategory }}" class="s-14">{{ subcategory }}</label>
+        </div>
+      {% endfor %}
+      <button name="apply-filter">Aplicar Filtro</button>
+    </div>
+  </aside>
+  <div class="feed">
+    <ul data-post-filter class="post-list feed-when-categorized">
+      {% for post in site.posts %}
+        {% if post.categories contains page.category %}
+          {% include small_post_item.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<script src="/assets/js/filter-posts.js">
+</script>

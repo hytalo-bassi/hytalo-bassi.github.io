@@ -2,9 +2,11 @@
 date: 12-02-2025 10:00 -04000
 layout: post
 title: "Comandos básicos de Terminal Linux"
-categories: linux study
+categories: SoftwareDevelopment DevOps
 image: "terminal.jpg"
 authors: hytalo_bassi
+redirect_from:
+    - /linux/study/2025/02/12/basicos-de-terminal.html
 ---
 
 Uma das coisas que mais assustam os principiantes de Linux é seu terminal. Antigamente, instalar aplicativos, mudar a fonte

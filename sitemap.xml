@@ -26,4 +26,12 @@ layout: null
     </url>
     {% endunless %}
   {% endfor %}
+  {% for category in site.valid_categories %}
+    <url>
+      <loc>{{ site.url }}/categories/{{ category[0] | downcase }}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+      <lastmod>{{ site.time }}</lastmod>
+    </url>
+  {% endfor %}
 </urlset>

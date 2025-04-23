@@ -1,0 +1,33 @@
+{% assign post = post.categories %}
+<li 
+    class="card"
+    data-post-title="{{ post.title }}"
+    data-post-category="{{ post.categories[0] }}"
+    data-post-subcategory="{% if post.categories[1] %}{{ post.categories[1] }}{% endif %}"
+    data-post-tags="{% if post.tags %}{{ post.tags | join: ' ' }}{% endif %}" >
+    <a href="{{ post.url | relative_url }}">
+        <div class="overflow-hide b-radius-10 h-274 w-full">
+            {%- if post.image -%}
+                {% picture jpt-webp "{{- post.image | relative_url -}}"
+                    --alt "" --image class="thumbnail" %}
+            {%- else -%}
+                {%- assign postImage = "/assets/images/image-default.jpg" -%}
+                {% picture jpt-webp "{{- post.image | relative_url -}}"
+                    --alt "" --image class="thumbnail" %}
+            {%- endif -%}
+        </div>
+        <div class="w-full overflow-hide border-box px-12">
+            <h1 class="my-12 s-28 line-clamp-3 weight-600">{{ post.title }}</h1>
+            <p class="s-20 weight-100 line-clamp-3">
+                {{ post.content | strip_html | truncatewords: 50 }}
+            </p>
+            <div class="w-full overflow-x-scroll overflow-x-scrollbar-hide row-grid gap-20 mb-48">
+                {% if post.tags %}
+                    {% for tag in post.tags %}
+                        <span class="tag weight-100">{{ tag }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</li>

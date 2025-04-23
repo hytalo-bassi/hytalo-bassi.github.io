@@ -9,6 +9,7 @@ $secondary-100: #F0E138 !default;
 
 $grey-700: #1F1F24 !default;
 $grey-600: #3E3E45 !default;
+$grey-500: #5f5f68 !default;
 $grey-100: #F1F1F1 !default;
 
 $text-color:            $grey-100 !default;
@@ -21,8 +22,7 @@ $highlight-background:  $grey-700 !default;
 $code-border-color:     $grey-600 !default;
 $blockquote-text-color: $grey-100 !default;
 
-// $highlight-color:  #454646 !default;
-
+$post-meta-color:       $secondary-100 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -52,7 +52,7 @@ $on-palm:          599px !default;
 $on-laptop:        799px !default;
 $on-big-laptop:    999px !default;
 
-$on-desktop:       899px !default;
+$on-desktop:       1054px !default;
 
 // ...
 

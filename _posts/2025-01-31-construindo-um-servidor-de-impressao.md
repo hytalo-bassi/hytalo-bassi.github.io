@@ -1,11 +1,12 @@
 ---
 title: "Como construir um Servidor de Impressão no Alpine com Samba e Cups"
 date: 2025-01-31 09:39:12 -0400
-toc: true
 layout: post
-categories: server
+categories: SoftwareDevelopment DevOps
 image: "server2.jpg"
-authors: hytalo_bassi 
+authors: hytalo_bassi
+redirect_from:
+  - /server/2025/01/31/construindo-um-servidor-de-impressao.html
 ---
 
 Há alguns dias atrás mostrei [como configurar um servidor de arquivos com Samba no Alpine](/server/2025/01/29/construindo-um-servidor-de-arquivos.html) e decidi agora ensinar como criar um servidor de impressão. **Você precisa já ter o Samba instalado e configurado para funcionar**.

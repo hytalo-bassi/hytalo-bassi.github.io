@@ -2,9 +2,11 @@
 title: "3 formas rápidas de instalar sistemas no Linux + Como usar máquinas virtuais"
 date: 2025-02-03 13:46:00 -0400
 layout: post
-categories: linux guide
+categories: SoftwareDevelopment DevOps
 image: "linux.jpg"
 authors: hytalo_bassi
+redirect_from:
+    - /linux/guide/2025/02/03/testando-e-instalando-sistemas.html
 ---
 
 # Introdução

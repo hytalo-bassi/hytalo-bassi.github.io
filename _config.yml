@@ -4,6 +4,9 @@ description: >-
 baseurl: ""
 url: "https://hytalo-bassi.github.io" 
 github_username:  hytalo-bassi
+lang: pt
+header_pages:
+  - about.md
 
 collections:
   authors:
@@ -12,6 +15,7 @@ collections:
 
 theme: minima
 plugins:
+  - jekyll-redirect-from
   - jekyll-toc
   - jekyll-feed
   - jekyll_picture_tag
@@ -30,6 +34,42 @@ include:
 
 exclude:
   - README.md
+  - tests/
+
+valid_categories:
+  SoftwareDevelopment:
+    - Web
+    - Mobile
+    - APIs_n_Microservices
+    - DevOps
+  CyberSecurity:
+    - DataProtection
+    - Networks
+  AI_n_ML:
+    - NeuralNetworks_n_DeepLearning
+    - NaturalLanguageProcessing
+    - ComputerVision
+    - Chatbots
+  DataAnalysis:
+    - DataScience
+    - Storage_n_DataProcessingInCloud
+    - BigData
+    - Warehousing
+    - BI
+  CloudComputing:
+    - CloudArchitecture
+  Blockchain:
+    - SmartContracts
+    - Crypto
+    - Fintechs
+  IoT:
+    - Protocols_n_Network
+    - Automation
+  AR_n_VR: []
+  Game:
+    - Engines
+
+
 
 valid_categories:
   SoftwareDevelopment:

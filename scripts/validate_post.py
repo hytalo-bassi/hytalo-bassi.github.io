@@ -35,7 +35,8 @@ ALLOWED_FRONTMATTER_PROPS = [
     "tags",
     "date",
     "authors",
-    "excerpt"
+    "excerpt",
+    "redirect_from"
 ]
 
 class Validator:
