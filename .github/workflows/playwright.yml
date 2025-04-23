@@ -9,16 +9,26 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
+      - name: Install ruby dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libvips-dev
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-    - name: Install dependencies
+    - name: Install Node dependencies
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
