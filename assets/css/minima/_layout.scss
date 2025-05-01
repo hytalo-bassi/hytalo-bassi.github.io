@@ -16,6 +16,7 @@
   letter-spacing: -1px;
   line-height: $base-line-height * $base-font-size * 2.25;
   margin-bottom: 0;
+  text-decoration: none;
 
   &,
   &:visited {
@@ -29,14 +30,11 @@
 
   @include media-query($on-palm) {
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-
     position: absolute;
     right: $spacing-unit / 2;
     text-align: right;
 
-    top: 9px;
+    top: 20px;
 
     > label {
       [for="nav-trigger"] {
@@ -46,6 +44,7 @@
         height: 36px;
         width: 36px;
         z-index: 2;
+
       }
     }
 
@@ -58,19 +57,16 @@
       text-align: center;
       width: 36px;
 
+
+
+
       > svg {
         fill: $grey-color-dark;
       }
     }
 
     input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+      font-size: 3vw;
     }
 
     .page-link {
@@ -220,6 +216,22 @@ hr.rounded {
   font-size: 17px;
 }
 
+.post-list-categories li:not(:first-child) .post-info-categories span{
+  font-size: 15px;
+}
+
+.post-info-categories span{
+color: white;
+  }
+
+.post-list-categories li:hover:not(:first-child){
+  background-color: rgba(80, 80, 80, 0.3);
+}
+
+.post-list li:hover {
+  background-color: rgba(80, 80, 80, 0.3);
+}
+
 .post-list-categories:not(:first-of-type) {
   margin-top: 30px;
   margin-left: 0;
@@ -261,11 +273,16 @@ hr.rounded {
     height: min-content;
     padding: calc($spacing-unit * .26) 0;
     width: 100%;
+    transition: 0.3s;
 
 
     @include media-query($on-desktop) {
       gap: calc($spacing-unit * .6);
     }
+  }
+
+  > li a{
+    text-decoration: none;
   }
 }
 
@@ -279,13 +296,20 @@ hr.rounded {
     flex-direction: row;
     gap: calc($spacing-unit * 2.53);
     height: min-content;
-    padding: calc($spacing-unit * .26) 0;
+    padding: calc($spacing-unit * .26) 5px;
     width: 100%;
+        transition: 0.3s;
+
 
     @include media-query($on-desktop) {
       gap: calc($spacing-unit * .6);
     }
   }
+
+  > li a{
+    text-decoration: none;
+  }
+
 }
 
 .post-meta-categories {
@@ -469,10 +493,15 @@ hr.rounded {
   .feed:not(:last-of-type) {
     margin-bottom: 130px;
   }
+
+  .section-header .post-list-heading  {
+    font-size: 4vw;
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 800px) {
-  .post-meta {
+  .post-meta, .post-meta-categories {
     font-size: 2vw;
   }
 
@@ -487,11 +516,24 @@ hr.rounded {
   .post-list-heading {
     font-size: 35px;
   }
+
+  .section-header .post-list-heading  {
+    font-size: 5vw;
+    margin-top: 15px;
+  }
+
+  .see-all  {
+    font-size: 2.5vw;
+  }
 }
 
 @media (max-width: 600px) {
   .feed:not(:first-of-type) {
     margin-top: 10vh;
+  }
+
+  .post-meta, .post-meta-categories{
+        font-size: 2.5vw;
   }
 
   .feed:not(:last-of-type) {
@@ -502,6 +544,14 @@ hr.rounded {
 @media (max-width: 450px) {
   .feed:not(:first-of-type) {
     margin-top: 5vh;
+  }
+
+   .post-meta, .post-meta-categories{
+        font-size: 3.5vw;
+  }
+
+  .post-info span, .post-info-categories span{
+        font-size: 3vw;
   }
 
   .feed:not(:last-of-type) {

@@ -16,7 +16,7 @@ categories:
 
 <div class="home">
   {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
+    <h1 class="page-title">{{ page.title }}</h1>
   {%- endif -%}
   {{ content }}
   {%- if site.posts.size > 0 -%}
@@ -40,11 +40,11 @@ categories:
           <h2 class="post-list-heading">{{ key }}</h2>
           <a href="/categories/{{ key }}" class="see-all"> Ver Tudo</a>
     </div>
-          <ul class="post-list-categories">
+    <ul class="post-list-categories">
             {% for post in category[1] %}
               {% include post_item.html post=post is_category=true %}
             {%- endfor -%}
-          </ul>
+      </ul>
         {% endif %}
         {% endif %}
       {%- endfor -%}
