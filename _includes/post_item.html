@@ -1,5 +1,6 @@
-<li class="{% if include.is_category %}post-item-categories{% endif%}">
-  <a href="{{ include.post.url | relative_url }}">
+<li class="{% if include.is_category %}post-item-categories{% endif%}"
+  onclick="window.location='{{ include.post.url | relative_url }}'"
+    style="cursor:pointer">
     <div class="post-thumbnail{% if include.is_category %}-categories{% endif %}">
         {%- if include.post.image -%}
             {% picture jpt-webp "{{- include.post.image | relative_url -}}"
@@ -41,6 +42,5 @@
         </p>
       </a>
     </div>
-  </a>
 </li>
 

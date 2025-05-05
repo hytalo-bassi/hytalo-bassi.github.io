@@ -220,9 +220,14 @@ hr.rounded {
   font-size: 15px;
 }
 
-.post-info-categories span{
-color: white;
-  }
+.post-info-categories span, .post-info span, .see-all{
+  color: white;
+}
+
+.link-test{
+  background-color: red;
+}
+
 
 .post-list-categories li:hover:not(:first-child){
   background-color: rgba(80, 80, 80, 0.3);
@@ -317,6 +322,7 @@ color: white;
   font-weight: $font-weight-light;
   margin-bottom: 0;
   margin-top: 0;
+  color: $post-meta-color;
 
   @include media-query($on-laptop) {
     font-size: $base-font-size * .4;
@@ -538,6 +544,10 @@ color: white;
 
   .feed:not(:last-of-type) {
     margin-bottom: 10vh;
+  }
+
+  .post-info span, .post-info-categories span{
+        font-size: 3vw;
   }
 }
 
