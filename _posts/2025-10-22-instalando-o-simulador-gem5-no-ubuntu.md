@@ -4,6 +4,7 @@ layout:         post
 title:          "Instalando o simulador gem5 no Ubuntu"
 date:           2025-10-22 7:00:00 -0400
 categories:     SoftwareDevelopment
+image:          "instalando_gem5_no_ubuntu-imagem_gerada_por_chatgpt.png"
 description:    "Aprenda como instalar o simulador gem5 no Ubuntu"
 ---
 
