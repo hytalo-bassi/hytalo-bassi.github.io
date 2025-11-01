@@ -171,17 +171,63 @@ Quando vamos colocar uma nova instrução é necessário saber qual será o tipo
 | **S-type**            |               `0100011`               | Usado para armazenar o resultado de instruções.                                               | `sw`, `sb`, `sh`                               | `Store`                                  |
 | **B-type**            |               `1100011`               | Usados para fluxo condicional. O imediato controla o fluxo.                                               | `beq`, `bne`, `blt`, `bge`                     | `BOp`                                  |
 
-```python
-0x0c: decode FUNCT3 {
-            format ROp {
-                0x0: decode KFUNCT5 {
-                    0x00: decode BS {
-                        0x0: add({{
-                            Rd = rvSext(Rs1_sd + Rs2_sd);
-                        }});
-                        0x1: sub({{
-                            Rd = rvSext(Rs1_sd - Rs2_sd);
-                        }});
-                    }
+Para o gem5 interpretar uma nova instrução, devemos informar seu código hexadecimal ao gem5. Muito possívelmente (posso assumir isso, pois você já chegou aqui), você já deve ter construído  o `riscv-gnu-toolchain` para conseguir compilar
+códigos com sua nova instrução. Para descobrir qual o código que devemos informar, crie um código que use sua instrução, compile ele usando seu respectivo compilador do RISC-V e rode o comando:
+
+```bash
+riscv64-unknown-elf-objdump -D <arquivo_compilado.o> | grep "<nome da sua instrução>"
+# outros objdump devem funcionar também
+```
+
+Isso deve retornar algo na seguinte forma:
+
+```
+...
+   101be: 02e787eb           <instrução> a5,a5,a4
 ...
 ```
+
+Para o RISC-V, o número `02e787eb` é quebrado em um binário em vários pedaços e estes pedaços nos ajudam a entender melhor como passar para o `decoder.isa`. Se a instrução que você está definindo for do tipo R (e eu irei assumir que é), então o RISC-V divide a assim:
+
+```csv
+Divisão das partes:
+funct7 | rs2    | rs1    | funct3 | rd     | opcode | quadrant
+31..25 | 24..20 | 19..15 | 14..12 | 11..7  | 6..2   | 1..0
+
+Divisão do nosso número:
+0x02e787eb
+0000 0010 1110 0111 1000 0111 1110 1011
+
+funct7  | rs2   | rs1   | funct3 | rd    | opcode | quadrant
+0000001 | 01110 | 01111 | 000    | 01111 | 11010  | 11
+
+Quadrante  3 (3)
+Opcode    26 (1A)
+Rd       585 (249) # varia de acordo com o registrador
+Funct3     0 (0)
+Rs1      585 (249) # varia de acordo com o registrador
+Rs2      584 (248) # varia de acordo com o registrador
+Funct7     1 (1)
+```
+
+Neste caso, as peças mais importantes neste tabuleiro são Quadrante, Opcode, Funct3 e Funct7. Para entender como isso vai nos ajudar, olhe esse trecho de uma instrução fictícia `mod` no `decoder.isa`:
+
+```python
+0x1A: decode FUNCT3 {
+    format ROp {
+        0x0: decode FUNCT7 {
+            0x01: mod({{                # aqui carrega o `nome` da instrução.
+                Rd = Rs1_sd % Rs2_sd;   # essa é a implementação.
+            }});
+        }
+    }
+}
+...
+```
+
+- O primeiro número `0x1A` equivale a `11010` em binário, e representa o opcode do `mod` porém sem o quadrante `11`.
+- o `format ROp` define que o tipo da instrução é R. 
+- O segundo número `0x0` equivale a `000` em binário, representa o funct3 `000`.
+- O terceiro e último número `0x01` equivale a `0000001` em binário e representa o funct7.
+
+> Este artigo foi inspirado grandemente por meio da documentação do gem5 e fórums onlines. Além disso, o artigo no Medium do Nick Felker ([Extending Gem5 with custom RISC-V commands](https://fleker.medium.com/extending-gem5-with-custom-risc-v-commands-653eeefe83b8)) foi extremamente precioso para adicionar novas instruções no gem5.
