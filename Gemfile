@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gem 'jekyll', '>= 4.0'
 gem "minima", ">= 2.5"
+gem "sass-embedded", ">= 1.93.3"
+
 # gem "github-pages", ">= 232", group: :jekyll_plugins
 
 group :jekyll_plugins do
@@ -9,7 +11,6 @@ group :jekyll_plugins do
   gem "jekyll-toc"
   gem 'jekyll_picture_tag', '>= 2.0'
   gem "jekyll-feed", ">= 0.12"
-  gem "sass-embedded", ">= 1.69.5"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
