@@ -278,6 +278,7 @@ A síntaxe `.isa` serve para reconhecer os padrões de instrução e saber difer
 - `format <FORMATO_DA_INSTRUÇÃO>`: esta é responsável por informar o tipo da instrução, o que muda a forma de implementação. 
 
 Para ficar mais claro a função do `decode`, vamos olhar este exemplo:
+{% raw %}
 ```python
 # código muito simplificado
 decode QUADRANT default Unknown::unknown() {
@@ -299,6 +300,7 @@ decode QUADRANT default Unknown::unknown() {
     }
 }
 ```
+{% endraw %}
 
 - O primeiro `decode QUADRANT` diz ao gem5 para ler os dois primeiros bits da instrução.
 - Aninhado dentro do quadrante temos então `0x3: decode OPCODE5` que, para o gem5, significa que quando o `QUADRANT=0x3=0b11` ele vai começar a ler os 5 bits de 6..2 na instrução, que representa o bitfield opcode.
@@ -308,8 +310,10 @@ Perceba também que, **os bitfields vão sendo decodificados da direita para a e
 
 o `format ROp` apenas nos diz que a instrução é `R-Type`, portanto tem dois registradores de entrada `Rs1` e `Rs2` e um de destino `Rd`.
 
+{% raw %}
 E por útlimo, quando todos os campos da instrução foram definidos temos `0x0: add({{...}})`, onde o `0x0` é o último campo da instrução. É aqui que o gem5 realmente entende como simular a instrução.
 Dentro de `add({{...}}` temos duas informações: 1. o nome da instrução, `add`; 2. a implementação da instrução dentro de `{{...}}`. A implementação é escrita em `C`.
+{% endraw %}
 
 #### Adicionando a instrução `addx`
 
