@@ -1,32 +1,30 @@
 source "https://rubygems.org"
+ruby "3.4.2"
 
-gem 'jekyll', '>= 4.0'
-gem "minima", ">= 2.5"
-gem "sass-embedded", ">= 1.93.3"
-
-# gem "github-pages", ">= 232", group: :jekyll_plugins
+gem "jekyll", "4.4.1"
+gem "minima", "2.5.2"
+gem "jekyll-sass-converter", "3.1.0"
+gem "json", "2.16.0"
+gem "bigdecimal", "3.3.1"
+gem "logger", "1.7.0"
+gem "csv", "3.3.5"
 
 group :jekyll_plugins do
-  gem "jekyll-redirect-from"
-  gem "jekyll-toc"
-  gem 'jekyll_picture_tag', '>= 2.0'
-  gem "jekyll-feed", ">= 0.12"
+  gem "jekyll-redirect-from", "0.16.0"
+  gem "jekyll-toc", "0.19.0"
+  gem "jekyll_picture_tag", "2.1.3"
+  gem "jekyll-feed", "0.17.0"
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
+platforms :windows do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
 
-# Performance-booster for watching directories on Windows
-gem "wdm", ">= 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "wdm", "0.2.0", :platforms => [:windows]
 
-# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
-# do not have a Java counterpart.
-gem "http_parser.rb", ">= 0.6.0", :platforms => [:jruby]
+gem "http_parser.rb", "0.6.0", :platforms => [:jruby]
 
 group :development do
-  gem 'scss_lint', require: false
+  gem "scss_lint", "0.60.0", require: false
 end
