@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.4.2"
+ruby file: ".ruby-version"
 
 gem "jekyll", "4.4.1"
 gem "minima", "2.5.2"
